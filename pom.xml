@@ -7,6 +7,11 @@
   <version>1.0-SNAPSHOT</version>
   <name>hello Maven Webapp</name>
   <url>http://maven.apache.org</url>
+
+    <properties>
+    <com.sun.jersey.version>1.12</com.sun.jersey.version>
+  </properties>
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -17,14 +22,21 @@
     <dependency>
       <groupId>com.sun.jersey</groupId>
       <artifactId>jersey-server</artifactId>
-      <version>1.12</version>
+      <version>${com.sun.jersey.version}</version>
     </dependency>
     <dependency>
       <groupId>com.sun.jersey</groupId>
       <artifactId>jersey-servlet</artifactId>
-      <version>1.12</version>
+      <version>${com.sun.jersey.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>${com.sun.jersey.version}.4</version>
+      <scope>provided</scope>
     </dependency>
   </dependencies>
+
   <build>
     <finalName>hello</finalName>
     <pluginManagement>
