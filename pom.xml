@@ -8,8 +8,10 @@
   <name>hello Maven Webapp</name>
   <url>http://maven.apache.org</url>
 
-    <properties>
-    <com.sun.jersey.version>1.12</com.sun.jersey.version>
+  <properties>
+    <com.sun.jersey.version>1.18.1</com.sun.jersey.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
   </properties>
 
   <dependencies>
@@ -30,9 +32,14 @@
       <version>${com.sun.jersey.version}</version>
     </dependency>
     <dependency>
+      <groupId>com.sun.jersey</groupId>
+      <artifactId>jersey-json</artifactId>
+      <version>${com.sun.jersey.version}</version>
+    </dependency>
+    <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
-      <version>${com.sun.jersey.version}.4</version>
+      <version>1.14.2</version>
       <scope>provided</scope>
     </dependency>
   </dependencies>
